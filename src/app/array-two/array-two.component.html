@@ -1,0 +1,32 @@
+<section>
+    <h2>Двовимірний масив</h2>
+    <div class="task">
+      <p>Дано цілочисельний масив А [1..5, 1..3]. Вивести на екран елементи масиву,
+        кратні 5, і їх індекси.</p>
+    </div>
+    
+    <form class="form">
+      <table class="array-table">
+        <tbody>
+        <tr *ngFor="let row of a; index as i">
+            <td *ngFor="let cell of row; index as j">
+              <input
+              type="number"
+                [name]="'input-' + i + '-' + j"
+                class="form_input"
+                #inputRef
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    
+    <div class="buttons">
+      <button id="result" class="button" (click)="findMultiples()">Знайти кратні 5</button>
+    </div>
+    
+    <div class="results">
+        <h3 [innerHTML]="result"></h3>
+    </div>
+  </section>

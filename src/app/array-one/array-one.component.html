@@ -1,0 +1,31 @@
+<section>
+    <h2>Одновимірний масив</h2>
+    <div class="task">
+        Створіть масив А [1..7] за допомогою генератора випадкових чисел і виведіть його на екран. Збільште всі його елементи в 2 рази.
+    </div>
+    <form class="form"action="" method="POST"> 
+        <fieldset>
+            <legend> Діапазон</legend>
+            <label>
+                Мінімальний елемент &nbsp; 
+                <input class="form_input"  type="number" #min> 
+            </label>
+            <label>
+                Максимальний елемент&nbsp; 
+                <input class="form_input"  type="number" #max> 
+            </label>
+        </fieldset>
+    </form>
+    <div class="buttons">
+        <button id="result" class="button" 
+        (click)="
+        output(min.value, max.value)">
+            Генерація
+        </button>
+    </div>
+    <div class="results">
+        <div id="resultPhone">
+            <h3 [innerHTML]="result"></h3>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,49 @@
+<section>
+    <h2>Завдання на лабораторну роботу 1</h2>
+    <div class="task">
+        Базовий клас: Телефон (поле: кількість функцій -k.)
+        Метод: Вартість: 40ln (k)
+        Нащадок: Мобільний (поле - модель)
+        Зміни в нащадках: Збільшити вартість в 3 рази.
+    </div>
+    <form class="form"action="" method="POST"> 
+        <fieldset>
+            <legend> Телефон</legend>
+            <label>
+                Кількість функцій &nbsp; 
+                <input class="form_input" id="phone_func" type="number" #phone_func> 
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend> Мобільний телефон</legend>
+            <label>
+                Кількість функцій &nbsp; 
+                <input class="form_input" id="mobile_phone_func" type="number" #mobile_phone_func> 
+            </label>
+            <br>
+            <label>
+                Назва моделі &nbsp; &nbsp;
+                <input class="form_input" id="model_name" type="text" #model_name > 
+            </label>
+        </fieldset>
+    </form>
+    <div class="buttons">
+        <button id="result" class="button" 
+        (click)="
+        calculatePhone(phone_func.value)">
+            Ціна
+        </button>
+        <button class="button button_mobile" (click)="
+        calculateMobilePhone(mobile_phone_func.value, model_name.value)">
+            Ціна
+        </button>
+    </div>
+    <div class="results">
+        <div id="resultPhone">
+            <h3>{{phones_show}}</h3>
+        </div>
+        <div id="resultMobilePhone">
+            <h3>{{mobile_phones_show}}</h3>
+        </div>
+    </div>
+</section>
